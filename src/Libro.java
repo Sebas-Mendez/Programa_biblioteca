@@ -65,9 +65,39 @@ public class Libro {
     //Metodos
     public void mostrarInformacion (){
         System.out.println("Titulo: " + this.getLibro());
-        System.out.println("Autor: "  + this,getAutor());
-        System.out.println("Cantidad Disponible: " + this.getCantidadDisponible());
+        System.out.println("Autor: "  + this.getAutor());
+        System.out.println("Copias: " + this.getCantidadDisponible());
+        System.out.println("Disponibilidad: " + this.isDisponibilidad());
     }
+
+
+    public void nombre(String Nombre){
+        this.Libro = Nombre;
+        System.out.println("Nombre: " + Nombre);
+    }
+
+
+    public void escritor (String escritor){
+        this.Autor = escritor;
+        System.out.println("Autor: " + escritor);
+    }
+
+
+    public void copias (int inventario, int prestar){
+        this.cantidadDisponible = inventario - prestar;
+        System.out.println("Copias prestadas: " + prestar);
+        System.out.println("Copias disponibles: " + cantidadDisponible);
+
+    }
+
+    public boolean estaDisp (){
+        if (cantidadDisponible < 1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 
 
 
