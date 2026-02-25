@@ -90,15 +90,12 @@ public class Libro {
 
     }
 
-    public boolean estaDisp (){
+    public boolean Disponibilidad (){
         if (cantidadDisponible < 1) {
             return false;
         } else {
             return true;
         }
     }
-
-
-
 
 }
